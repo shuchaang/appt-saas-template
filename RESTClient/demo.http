@@ -1,7 +1,0 @@
-POST http://localhost:3000/api/sc/add  
-Content-Type: application/json
-
-{
-    "id":1,
-    "name": "scccc"
-}
