@@ -38,10 +38,7 @@ export class LoginService {
       });
       return { token };
     } else {
-      const authInfo = this.authService.auth(
-        (await tokenInfo).accessToken,
-        account.id,
-      );
+      const authInfo = this.authService.auth((await tokenInfo).accessToken);
       if (!authInfo) {
         const token = await this.authService.generateToken({
           username: account.accountName,
@@ -54,6 +51,6 @@ export class LoginService {
   }
 
   logout(): any {
-    throw new Error('Method not implemented.');
+    console.log('logout');
   }
 }

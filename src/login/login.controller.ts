@@ -11,7 +11,7 @@ export class LoginController {
     const { token } = await this.loginService.login(req);
     return { assess_token: token };
   }
-  @Get('/logout')
+  @Post('/logout')
   logout(): any {
     return this.loginService.logout();
   }

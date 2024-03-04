@@ -32,10 +32,10 @@ export class AuthService {
     }
   }
 
-  async auth(token: string, userId: number): Promise<any> {
+  async auth(token: string): Promise<any> {
     try {
       const tokenInfo = this.authRepository.findOne({
-        where: { accountId: userId, accessToken: token },
+        where: { accessToken: token },
       });
       if (!tokenInfo) {
         return null;

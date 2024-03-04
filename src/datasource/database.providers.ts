@@ -12,7 +12,6 @@ export const databaseProviders = [
         database: 'appt',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
-        logging: true,
       });
 
       return dataSource.initialize();
