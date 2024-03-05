@@ -1,7 +1,6 @@
 import {
   Injectable,
   NestMiddleware,
-  RequestMethod,
   UnauthorizedException,
 } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
